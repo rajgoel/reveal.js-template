@@ -2,6 +2,10 @@
 
 A template easing the use of reveal.js with my favorite configuration.
 
+## Demo
+
+https://rajgoel.github.io/reveal.js-template/
+
 ## Usage
 
 - Clone or copy the repository
