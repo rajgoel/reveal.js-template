@@ -116,7 +116,23 @@ fetch('course.json')
     /******************************************
      * Initialize Reveal
      ******************************************/   
-    Reveal.initialize(RevealConfig);
+    Reveal.initialize(RevealConfig)
+    .then(() => {
+      // Admonitions
+      document.querySelectorAll("blockquote").forEach(blockquote => {
+        const firstParagraph = blockquote.querySelector("p");
+        if (!firstParagraph) return;
+
+        const match = firstParagraph.textContent.trim().match(/^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]/i);
+        if (match) {
+          const type = match[1].toLowerCase();
+          blockquote.classList.add("admonition", type);
+
+          // Remove the [!...] marker from the first paragraph
+          firstParagraph.innerHTML = firstParagraph.innerHTML.slice(match[0].length).trimStart();
+        }
+      });
+    });
   })
   .catch(error => console.error('Error loading course data:', error));
 

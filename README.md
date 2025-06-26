@@ -15,6 +15,25 @@ https://rajgoel.github.io/reveal.js-template/
 - Update license if necessary
 - Update README.md
 
+## Admonitions
+
+Github style admonitions are supported in Markdown:
+
+> [!NOTE]
+> A note highlights important information.
+
+> [!TIP]
+> A tip provides helpful information.
+
+> [!IMPORTANT]
+> Important information for success.
+
+> [!WARNING]
+> A warning alerts users about potential risks.
+
+> [!CAUTION]
+> Caution should be taken to avoid negative consequences.
+
 ## License
 
 The Unlicense
