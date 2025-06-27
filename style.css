@@ -138,6 +138,14 @@ blockquote.admonition.caution::before {
 	opacity: 1;
 	display: inline; }
 
+
+/*********************************************
+ * Display fractions properly
+ *********************************************/
+.MathJax .mfrac > span {
+  min-height: 1px!important;
+}
+
 /*********************************************
  * Print
  *********************************************/
